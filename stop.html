@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="clock.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="change2">
+        <div class="boll2"></div>
+    </div>
+    <div class="container2">
+        <div class="box2">
+            <div class="clock">
+                00 : 00 : 00 : 000
+            </div>
+            <div class="button">
+                <button class="btn1">Start</button>
+                <button class="btn2">Stop</button>
+                <button class="btn3">Reset</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        let [miliseconds, seconds, minutes, hours] = [0, 0, 0, 0];
+        let timer = document.querySelector(".clock");
+        let int;
+
+        document.querySelector(".btn1").addEventListener("click", function () {
+            int = setInterval(startTime, 10);
+        })
+
+
+        document.querySelector(".btn2").addEventListener("click", function (){
+            clearInterval(int);
+        })
+
+        document.querySelector(".btn3").addEventListener("click", function (){
+            clearInterval(int);
+
+            [miliseconds, seconds, minutes, hours] = [0, 0, 0, 0];
+
+            timer.innerHTML = "00 : 00 : 00 : 000" ;
+
+
+        })
+
+
+
+        function startTime() {
+            miliseconds+= 10;
+
+            if (miliseconds == 1000) {
+                miliseconds = 0;
+                seconds++;
+                if (seconds == 60) {
+                    seconds = 0;
+                    minutes++;
+                    if (minutes == 60) {
+                        minutes = 0;
+                        hours++;
+                    }
+                }
+            }
+
+            let h = hours < 10 ? "0" + hours : hours;
+            let m = minutes < 10 ? "0" + minutes : minutes;
+            let s = seconds < 10 ? "0" + seconds : seconds;
+            let ms = miliseconds < 10 ? "00" + miliseconds : 
+            miliseconds < 100 ? "0" + miliseconds : miliseconds;
+
+
+            timer.innerHTML = `${h} : ${m} : ${s} : ${ms}`; 
+
+        }
+
+        document.querySelector(".change2").addEventListener("click", ()=>{
+            window.location.assign("time.html");
+        })
+
+
+
+    </script>
+</body>
+
+</html>

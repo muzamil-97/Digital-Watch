@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: rgb(235, 38, 71);
+}
+
+.container2{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: rgb(71, 181, 209);
+}
+
+.box{
+    width: 800px;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+}
+
+.box2{
+    width: 800px;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+}
+
+.time{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(235, 0, 255, 0.11);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+    backdrop-filter: blur(40px);
+    border-radius: 12px;
+}
+
+.clock{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(235, 0, 255, 0.11);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+    backdrop-filter: blur(40px);
+    border-radius: 12px;
+    font-size: 80px;
+}
+
+.time span{
+    font-size: 80px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+.time span::after{
+    content: '';
+    position: absolute;
+    font-size: 1rem;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#hrs::after{
+    content: 'Hours';
+}
+
+#min::after{
+    content: 'Minutes';
+}
+
+#sec::after{
+    content: 'Seconds';
+}
+
+.box::before{
+    content: '';
+    width: 160px;
+    height: 160px;
+    border-radius: 6px;
+    background-color: #73dd1c;
+    position: absolute;
+    left: -75px;
+    top: -35%;
+    z-index: -100;
+}
+
+.box2::before{
+    content: '';
+    width: 160px;
+    height: 160px;
+    border-radius: 6px;
+    background-color: #1cdd8d;
+    position: absolute;
+    left: -75px;
+    top: -35%;
+    z-index: -100;
+}
+
+.box::AFTER{
+    content: '';
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: #a211ce;
+    position: absolute;
+    right: -75px;
+    bottom: -35%;
+    z-index: -1;
+}
+.box2::AFTER{
+    content: '';
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: #d17b0a;
+    position: absolute;
+    right: -75px;
+    bottom: -35%;
+    z-index: -1;
+}
+
+.button{
+    width: 100%;
+    text-align: center;
+    margin-block-start: 3.3rem;
+}
+
+.btn1{
+    padding: 12px 30px;
+    border: none;
+    outline: none;
+    border-radius: 16px;
+    color: #fff;
+    background-color: #4d8dc1;
+    font-size: 1.01rem;
+}
+
+.btn1:hover{
+    background-color: #429ee9;
+    font-size: 1.02rem;
+}
+
+.btn2{
+    padding: 12px 30px;
+    border: none;
+    outline: none;
+    border-radius: 16px;
+    color: #fff;
+    background-color: #4d8dc1;
+    font-size: 1.01rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.btn2:hover{
+    background-color: #429ee9;
+    font-size: 1.02rem;
+}
+
+
+.btn3{
+    padding: 12px 30px;
+    border: none;
+    outline: none;
+    border-radius: 16px;
+    color: #fff;
+    background-color: #4d8dc1;
+    font-size: 1.01rem;
+}
+
+.btn3:hover{
+    background-color: #429ee9;
+    font-size: 1.02rem;
+}
+
+.change{
+    width: 60px;
+    height: 24px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 100;
+    border-radius: 20px;
+    top: 30px;
+    right: 160px;
+}
+
+.change2{
+    width: 60px;
+    height: 24px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 100;
+    border-radius: 20px;
+    top: 30px;
+    right: 160px;
+}
+
+.boll{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(71, 181, 209);
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+    top: 2px;
+}
+
+.boll2{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(235, 38, 71);
+    border-radius: 50%;
+    position: absolute;
+    right: 5px;
+    top: 2px;
+}
